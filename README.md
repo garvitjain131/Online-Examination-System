@@ -24,6 +24,25 @@ npm.cmd run preview
 
 The production build is in `dist/` and can be served by a static web server.
 
+## Deploy to Vercel
+
+Import `garvitjain131/Online-Examination-System` at https://vercel.com/new.
+The Git repository root contains `package.json`, so leave Root Directory as `./`.
+The included `vercel.json` selects Vite, installs dependencies with `npm ci`,
+builds with `npm run build`, and serves `dist/`. No environment variables are required.
+
+Alternatively, deploy directly from this project folder with the Vercel CLI:
+
+```powershell
+cd D:\PROJECTS\SE\online-examination
+npx.cmd vercel login
+npx.cmd vercel --prod
+```
+
+Deployment publishes the browser-based prototype. Records remain local to each
+browser and origin; data from localhost is not copied to the deployed site, and
+students and faculty on different devices do not share records.
+
 ## Demonstrate the workflow
 
 The app opens as demo student Garvit Jain (E225). Click the avatar/account panel to switch to Faculty or Administrator. Demo accounts do not require passwords.
